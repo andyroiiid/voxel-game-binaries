@@ -49,6 +49,8 @@ The particles are GPU controlled.
 
 The earliest version I could find on my computers.
 
+![screenshot](https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-3-0.png)
+
 ```
 move: WASD
 jump: space
