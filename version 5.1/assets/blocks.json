@@ -1,0 +1,15 @@
+{
+  "size": 128,
+  "filtered": true,
+  "blocks": {
+    "Null": "assets/tiles/null.png",
+    "Sand": "assets/tiles/sand.png",
+    "Dirt": "assets/tiles/dirt.png",
+    "Stone": "assets/tiles/stone.png",
+    "Brick": "assets/tiles/brick.png",
+    "Grass": "assets/tiles/grass.png",
+    "Wood": "assets/tiles/wood.png",
+    "Plank": "assets/tiles/plank.png",
+    "Max": "assets/tiles/max.png"
+  }
+}

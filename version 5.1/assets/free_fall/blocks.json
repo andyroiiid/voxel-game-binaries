@@ -1,0 +1,13 @@
+{
+  "size": 16,
+  "filtered": false,
+  "blocks": {
+    "Null": "assets/free_fall/tiles/null.png",
+    "Basic": "assets/free_fall/tiles/basic.png",
+    "Respawn": "assets/free_fall/tiles/respawn.png",
+    "Info": "assets/free_fall/tiles/info.png",
+    "Switch": "assets/free_fall/tiles/switch.png",
+    "Door": "assets/free_fall/tiles/door.png",
+    "Max": "assets/free_fall/tiles/max.png"
+  }
+}
