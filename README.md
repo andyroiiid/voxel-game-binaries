@@ -6,10 +6,13 @@ You can download the whole repository [here](https://github.com/andyroiiid/voxel
 
 The zip file size is about 50MB.
 
-This game uses OpenGL [Direct State Access(DSA)](https://www.khronos.org/opengl/wiki/Direct_State_Access), so there
-might
+**IMPORTANT!!!**
+
+**This game uses OpenGL [Direct State Access(DSA)](https://www.khronos.org/opengl/wiki/Direct_State_Access).**
+
+**I didn't implement non-DSA workarounds, so there might
 be [some driver bugs](https://blog.magnum.graphics/announcements/2020.06/#certain-gl-drivers-continue-to-be-a-hot-mess)
-if you run it on Intel GPUs.
+if you run it on Intel GPUs.**
 
 # version 5 (the current version)
 
