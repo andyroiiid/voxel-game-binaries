@@ -6,7 +6,19 @@ Binaries for a voxel game (engine?).
 
 The current version of the game (engine).
 
+[The physics engine is slightly modified from version 3](#physics).
+
 # version 4
+
+Players are flying in this version.
+
+```
+horizontal movement: WASD
+ascend: space
+descend: left shift
+left click: destroy block
+quit: alt+F4
+```
 
 Tried to implement some mining gameplay.
 
@@ -31,6 +43,8 @@ The particles are GPU controlled.
    using sampler2DArray and instance buffer
 ```
 
+[The physics engine is slightly modified from version 3](#physics).
+
 # version 3
 
 The earliest version I could find on my computers.
@@ -48,6 +62,14 @@ You can jump at any time (even in the air).
 I implemented a [fake ambient occlusion effect](https://iquilezles.org/www/articles/voxellines/voxellines.htm) in this
 version. This technique, however, is verbose to set up and introduces tons of problems when generating chunks with
 multi-threading, so I didn't migrate it to the next version.
+
+## physics
+
+The physics engine is a simple custom one written from scratch.
+
+It doesn't contain any broad-phase or narrow phase, and it only supports collision detection and ray-casting.
+
+The player has an AABB collider instead of a capsule.
 
 # version 2
 
