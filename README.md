@@ -97,7 +97,7 @@ The particles are GPU controlled.
 
 # version 3
 
-The earliest version I could find on my computers.
+The earliest version I could find binaries on my computers.
 
 <img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-3-0.png" width=50% height=50%>
 
