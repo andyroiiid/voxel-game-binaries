@@ -121,16 +121,25 @@ The physics engine is a simple custom one written from scratch.
 
 It doesn't contain any broad-phase or narrow phase, and it only supports collision detection and ray-casting.
 
+TODO: describe the implementation
+
 The player has an AABB collider instead of a capsule.
 
 # version 2
 
 Version 2 is a rewrite of version 1 using raw OpenGL.
 
-I still have source code for it, but the compiled executable seems to have some problems with Intel integrated GPUs.
+I still have source code for it, but the compiled executable seems to have some problems relating to dependencies.
 
-I wrote a OpenGL api wrapper called `directgl` for it. It's just a wrapper for the
-OpenGL [Direct State Access(DSA)](https://www.khronos.org/opengl/wiki/Direct_State_Access) apis.
+I wrote a OpenGL api wrapper called `directgl` for it. It's
+an [OOP (Object-oriented Programming)](https://en.wikipedia.org/wiki/Object-oriented_programming) wrapper for the
+OpenGL [DSA (Direct State Access)](https://www.khronos.org/opengl/wiki/Direct_State_Access) apis.
+
+It was an over-engineered version with tons of dependencies. I tried to use [EnTT](https://github.com/skypjack/entt),
+which is a C++ [ECS (Entity Component System)](https://en.wikipedia.org/wiki/Entity_component_system) framework. Then I
+realized that I didn't need it at all. I also used [spdlog](https://github.com/gabime/spdlog) for logging, and it
+greatly slowed down the compilation speed. Logging with [SDL log](https://wiki.libsdl.org/CategoryLog) is enough for
+most games.
 
 # version 1
 
