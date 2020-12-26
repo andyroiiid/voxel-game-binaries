@@ -8,7 +8,19 @@ The zip file size is about 50MB.
 
 **IMPORTANT!!!**
 
-**This game uses OpenGL [Direct State Access(DSA)](https://www.khronos.org/opengl/wiki/Direct_State_Access).**
+**This game uses [OpenGL 4.6 core profile](https://en.wikipedia.org/wiki/OpenGL#OpenGL_4.6)
+and [Direct State Access(DSA)](https://www.khronos.org/opengl/wiki/Direct_State_Access).**
+
+**It's completely possible to migrate the api to use OpenGL 3.3 core profile and DSA extensions. But for now please use
+up-to-date GPUs to run this game. Here is a driver compatibility list from Wikipedia:**
+
+```
+NVIDIA GeForce 397.31 Graphics Driver on Windows 7, 8, 10 x86-64 bit only, no 32-bit support. Released April 2018
+AMD Adrenalin 18.4.1 Graphics Driver on Windows 7 SP1, 10 version 1803 (April 2018 update) for AMD Radeon™ HD 7700+, HD 8500+ and newer. Released April 2018.
+Intel 26.20.100.6861 graphics driver on Windows 10. Released May 2019.
+```
+
+**To put it simply, if you ever received any graphics driver update these two years, you are fine.**
 
 **I didn't implement non-DSA workarounds, so there might
 be [some driver bugs](https://blog.magnum.graphics/announcements/2020.06/#certain-gl-drivers-continue-to-be-a-hot-mess)
