@@ -2,11 +2,33 @@
 
 Binaries for a voxel game (engine?).
 
-# version 5
+You can download the whole repository [here](https://github.com/andyroiiid/voxel-game-binaries/archive/master.zip).
 
-The current version of the game (engine).
+The zip file size is about 50MB.
+
+This game uses OpenGL [Direct State Access(DSA)](https://www.khronos.org/opengl/wiki/Direct_State_Access), so there
+might
+be [some driver bugs](https://blog.magnum.graphics/announcements/2020.06/#certain-gl-drivers-continue-to-be-a-hot-mess)
+if you run it on Intel GPUs.
+
+# version 5 (the current version)
+
+The current version of the game (engine). This version
+requires [AVX2 instruction set support](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2).
 
 [The physics engine is slightly modified from version 3](#physics).
+
+TODO: Tracy profiler
+
+TODO: RenderDoc
+
+## version 5.1
+
+TODO
+
+## version 5.0
+
+TODO
 
 # version 4
 
