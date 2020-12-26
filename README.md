@@ -22,6 +22,9 @@ quit: alt+F4
 
 Tried to implement some mining gameplay.
 
+This version will randomly flip the textures to reduce repetition. I learned this technique from some minecraft mod
+(I think it's OptiFine?).
+
 Integrated the [FMOD](https://fmod.com/) sound engine.
 
 The particles are GPU controlled.
