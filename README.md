@@ -31,6 +31,8 @@ if you run it on Intel GPUs.**
 The current version of the game (engine). This version
 requires [AVX2 instruction set support](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2).
 
+TODO: provide SSE build
+
 [The physics engine is slightly modified from version 3](#physics).
 
 TODO: Tracy profiler
@@ -115,13 +117,25 @@ I implemented a [fake ambient occlusion effect](https://iquilezles.org/www/artic
 version. This technique, however, is verbose to set up and introduces tons of problems when generating chunks with
 multi-threading, so I didn't migrate it to the next version.
 
-## physics
+## Physics
 
 The physics engine is a simple custom one written from scratch.
 
-It doesn't contain any broad-phase or narrow phase, and it only supports collision detection and ray-casting.
+I didn't have an experience implementing a physice engine before. So it doesn't contain any broad-phase or narrow phase,
+and it only supports collision detection and ray-casting. The collider on the player supports a behaviour similar
+to [`KinematicBody.move_and_slide`](https://docs.godotengine.org/en/3.2/classes/class_kinematicbody2d.html#class-kinematicbody2d-method-move-and-slide)
+of the Godot engine.
 
-TODO: describe the implementation
+Erin Catto has [a great talk](https://www.youtube.com/watch?v=7_nKOET6zwI) about how to implement physics engines. But I
+only used some really basic techniques in this engine.
+
+### Binary search for Time of Impact
+
+TODO: illustration and when to terminate
+
+### A simple way to implement ray-casting for voxel worlds
+
+TODO: illustration and time profiling
 
 The player has an AABB collider instead of a capsule.
 
