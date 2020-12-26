@@ -12,6 +12,8 @@ The current version of the game (engine).
 
 Players are flying in this version.
 
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-4-0.png" width=50% height=50%>
+
 ```
 horizontal movement: WASD
 ascend: space
@@ -20,12 +22,20 @@ left click: destroy block
 quit: alt+F4
 ```
 
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-4-1.png" width=50% height=50%>
+
 Tried to implement some mining gameplay.
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-4-2.png" width=50% height=50%>
 
 This version will randomly flip the textures to reduce repetition. I learned this technique from some minecraft mod
 (I think it's OptiFine?).
 
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-4-3.png" width=50% height=50%>
+
 Integrated the [FMOD](https://fmod.com/) sound engine.
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-4-4.png" width=50% height=50%>
 
 The particles are GPU controlled.
 
@@ -52,7 +62,7 @@ The particles are GPU controlled.
 
 The earliest version I could find on my computers.
 
-![screenshot](https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-3-0.png)
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-3-0.png" width=50% height=50%>
 
 ```
 move: WASD
