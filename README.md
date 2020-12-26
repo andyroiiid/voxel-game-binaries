@@ -26,6 +26,8 @@ Intel 26.20.100.6861 graphics driver on Windows 10. Released May 2019.
 be [some driver bugs](https://blog.magnum.graphics/announcements/2020.06/#certain-gl-drivers-continue-to-be-a-hot-mess)
 if you run it on Intel GPUs.**
 
+TODO: fix license problem
+
 # version 5 (the current version)
 
 The current version of the game (engine). This version
