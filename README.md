@@ -42,7 +42,9 @@ TODO: chunk system: thread-safety; migrating from manually triggered update to t
 [The physics engine is slightly modified from version 3](#physics). It will push players out if they are stuck in a
 newly generated block. Correctly resolving such conflicts is complicated, however.
 
-TODO: use MagicaVoxel as level editor; parse vox file
+TODO: use MagicaVoxel as level editor
+
+TODO: parse vox file(https://github.com/ephtracy/voxel-model/blob/master/MagicaVoxel-file-format-vox.txt)
 
 ## version 5.2
 
@@ -75,6 +77,9 @@ TODO: daylight cycle
 TODO: modify the lighting system so that player can easily recognize the distance (mist effect)
 
 # version 4
+
+The sound effects are from [Adobe](https://www.adobe.com/products/audition/offers/audition_dlc.html). The BGM is
+Afterglow from [Tungerman](https://tungerman.itch.io/).
 
 <img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-4-0.png" width=50% height=50%>
 
