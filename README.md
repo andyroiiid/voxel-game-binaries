@@ -138,9 +138,13 @@ quit: alt+F4
 
 You can jump at any time (even in the air).
 
+## Ambient occlusion
+
 I implemented a [fake ambient occlusion effect](https://iquilezles.org/www/articles/voxellines/voxellines.htm) in this
 version. This technique, however, is verbose to set up and introduces tons of problems when generating chunks with
 multi-threading, so I didn't migrate it to the next version.
+
+I have to admit that it looks great and I really want to re-implement it in the newer versions.
 
 ## Physics
 
