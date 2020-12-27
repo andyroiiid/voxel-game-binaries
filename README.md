@@ -58,11 +58,15 @@ TODO: self-emission texture
 
 ## version 5.1
 
-TODO: Playground mode
+I used a new set of textures in this version because the Kenney textures seemed too dark
+after [distance attenuation](#distance-attenuation).
+
+This version also contained a Playground mode, which is a Minecraft-like mode. In fact, it had always been in the game.
+But I didn't include the main menu in version 5.0, so no one could access it.
+
+### Level rework
 
 TODO: level rework
-
-TODO: changed texture
 
 ## version 5.0
 
