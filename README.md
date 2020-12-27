@@ -30,8 +30,6 @@ TODO: add TOC
 
 TODO: fix license problem
 
-TODO: remove decade sound
-
 # version 5 (the current version)
 
 The current version of the game (engine). This version
