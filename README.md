@@ -68,13 +68,33 @@ TODO: changed texture
 
 The textures and sound effects are from [Kenney](https://www.kenney.nl/). Thanks, Kenney!
 
+### Level design
+
 TODO: Free Fall level design
 
-TODO: skybox
+### The skybox
 
-TODO: daylight cycle
+The skybox is a procedural one adopted from [glsl-atmosphere](https://github.com/wwwtyro/glsl-atmosphere).
 
-TODO: modify the lighting system so that player can easily recognize the distance (mist effect)
+### Lighting
+
+I decided to make a lighting system that could smoothly switch between day and night. It was easy to implement a daytime
+lighting system and [half lambert](https://developer.valvesoftware.com/wiki/Half_Lambert) worked well. But when the sun
+was below the horizon, the directional lighting seemed weird. So I made another nighttime lighting system, making the
+player the only light source. Then I interpolated between these two systems with the time of the day.
+
+### Distance attenuation
+
+After the map grew big, I realized that it was hard to recognize the spatial relations between blocks, thus I made
+blocks darker when they are far away.
+
+#### before attenuation
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/before-attenuation.png" width=50% height=50%>
+
+#### after attenuation
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/after-attenuation.png" width=50% height=50%>
 
 # version 4
 
