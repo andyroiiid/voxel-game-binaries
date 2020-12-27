@@ -26,6 +26,8 @@ Intel 26.20.100.6861 graphics driver on Windows 10. Released May 2019.
 be [some driver bugs](https://blog.magnum.graphics/announcements/2020.06/#certain-gl-drivers-continue-to-be-a-hot-mess)
 if you run it on Intel GPUs.**
 
+TODO: add TOC
+
 TODO: fix license problem
 
 TODO: remove decade sound
@@ -41,7 +43,7 @@ TODO: Tracy profiler
 
 TODO: RenderDoc
 
-TODO: chunk system: migrating from manually update to timestamp-based update
+TODO: chunk system: thread-safety; migrating from manually triggered update to timestamp-based update
 
 [The physics engine is slightly modified from version 3](#physics). It will push players out if they are stuck in a
 newly generated block. Correctly resolving such conflicts is complicated, however.
@@ -149,11 +151,10 @@ and it only supports collision detection and ray-casting. The collider on the pl
 to [`KinematicBody.move_and_slide`](https://docs.godotengine.org/en/3.2/classes/class_kinematicbody2d.html#class-kinematicbody2d-method-move-and-slide)
 of the Godot engine.
 
-Erin Catto has [a great talk](https://www.youtube.com/watch?v=7_nKOET6zwI) about how to implement physics engines. But I
+Erin Catto has [a great talk](https://www.youtube.com/watch?v=7_nKOET6zwI) about how to implement physics engines. There
+are also [articles](https://tavianator.com/2011/ray_box.html) about how to implement branchless AABB ray-casting.
+Developers from Respawn shared [how to write SIMD version of it](https://www.youtube.com/watch?v=6BIfqfC1i7U). But I
 only used some really basic techniques in this engine.
-
-There are also [articles](https://tavianator.com/2011/ray_box.html) about how to implement branchless AABB ray-casting.
-Developers from Respawn shared [how to write SIMD version of it](https://www.youtube.com/watch?v=6BIfqfC1i7U).
 
 ### Binary search for Time of Impact
 
@@ -183,7 +184,21 @@ most games.
 
 ## Chunk system
 
-TODO: add description for the Chunk system and its multi-threaded generation
+Minecraft has an 2D chunk system. It has a chunk size of 16 * 16 * 256, so there is a limit to where you can place
+blocks. This system works fine for Minecraft, but I wanted to support infinite building in three directions. So, I made
+a chunk system with 32 * 32 * 32 chunk size. I chose this size because you can index into any chunk with a 16 bit
+integer (32 = 2 ^ 5, 32 * 32 * 32 = 2 ^ 15).
+
+At first, I tried to manage chunks with a 3D bidirectional linked list. It turned out to be a complete mess. I had to
+handle tons of edge conditions and if I wanted to access a diagonal chunk, I had to dereference multiple pointers,
+hoping that none of them is a `nullptr`. So, I just abandoned linked lists and used `std::unordered_map`. It worked
+great.
+
+Generating a chunk's render data took about a millisecond, and I didn't have that much time for it on the main CPU
+thread (for a 60fps game, each frame has 16 milliseconds). Therefore, I had to setup some multi-threaded processing.
+Then there was another problem: OpenGL is hard to work with when you are programming a multi-threaded program. It's much
+safer to only call OpenGL functions on a single thread (usually the main thread). My solution was to prepare the render
+data on worker threads, and to upload them on the main thread when it is idle.
 
 ## Perlin noise world generation
 
@@ -203,7 +218,8 @@ from [the original Perlin noise implementation](https://mrl.nyu.edu/~perlin/nois
 differently in GCC and MSVC! After reading their standard libraries source code, I found that they both use
 [the Knuth shuffle algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle). But there
 are [two ways](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm) (iterating from two
-directions) to shuffle an array, and they do not produce the same results.
+directions) to shuffle an array, and they do not produce the same results. The solution was simple: I wrote my
+own `shuffle()`.
 
 # version 1
 
