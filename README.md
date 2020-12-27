@@ -28,23 +28,21 @@ if you run it on Intel GPUs.**
 
 TODO: add TOC
 
-TODO: fix license problem
+TODO: add a proper license
 
 # version 5 (the current version)
 
 The current version of the game (engine). This version
 requires [AVX2 instruction set support](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2).
 
-TODO: provide SSE build
-
-TODO: Tracy profiler
-
-TODO: RenderDoc
+TODO: provide SSE build for the last version
 
 TODO: chunk system: thread-safety; migrating from manually triggered update to timestamp-based update
 
 [The physics engine is slightly modified from version 3](#physics). It will push players out if they are stuck in a
 newly generated block. Correctly resolving such conflicts is complicated, however.
+
+TODO: use MagicaVoxel as level editor; parse vox file
 
 ## version 5.2
 
@@ -58,13 +56,19 @@ TODO: self-emission texture
 
 ## version 5.1
 
+TODO: Playground mode
+
 TODO: level rework
 
 TODO: changed texture
 
 ## version 5.0
 
-TODO: level design
+The textures and sound effects are from [Kenney](https://www.kenney.nl/). Thanks, Kenney!
+
+TODO: Free Fall level design
+
+TODO: skybox
 
 TODO: daylight cycle
 
@@ -72,9 +76,9 @@ TODO: modify the lighting system so that player can easily recognize the distanc
 
 # version 4
 
-Players are flying in this version.
-
 <img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-4-0.png" width=50% height=50%>
+
+Players are flying in this version.
 
 ```
 horizontal movement: WASD
@@ -118,7 +122,7 @@ The particles are GPU controlled.
    using sampler2DArray and instance buffer
 ```
 
-[The physics engine is slightly modified from version 3](#physics).
+[The physics engine is from version 3](#physics).
 
 # version 3
 
@@ -167,6 +171,12 @@ TODO: illustration and when to terminate
 TODO: illustration and time profiling
 
 The player has an AABB collider instead of a capsule.
+
+## Tracy profiler
+
+I used the [Tracy profiler](https://github.com/wolfpld/tracy) to profile my game.
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/tracy.png" width=50% height=50%>
 
 # version 2
 
@@ -230,3 +240,12 @@ I couldn't find any file for this version.
 I think they were on my self-hosted git server, but that server was long gone.
 
 Version 1 is just some basic voxel world rendering written with the [magnum](https://github.com/mosra/magnum) framework.
+
+## RenderDoc
+
+I used the [RenderDoc](https://renderdoc.org/) to debug my graphics.
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/renderdoc.png" width=50% height=50%>
+
+This is a screenshot for version 3 of the game, but I've been using RenderDoc since the first version.
+
