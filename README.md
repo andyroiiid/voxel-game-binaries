@@ -37,13 +37,14 @@ requires [AVX2 instruction set support](https://en.wikipedia.org/wiki/Advanced_V
 
 TODO: provide SSE build
 
-[The physics engine is slightly modified from version 3](#physics).
-
 TODO: Tracy profiler
 
 TODO: RenderDoc
 
 TODO: chunk system: migrating from manually update to timestamp-based update
+
+[The physics engine is slightly modified from version 3](#physics). It will push players out if they are stuck in a
+newly generated block. Correctly resolving such conflicts is complicated, however.
 
 ## version 5.2
 
@@ -57,11 +58,17 @@ TODO: self-emission texture
 
 ## version 5.1
 
-TODO: level rework; changed texture
+TODO: level rework
+
+TODO: changed texture
 
 ## version 5.0
 
-TODO: level design; modify the lighting system so that player can easily recognize the distance (mist effect)
+TODO: level design
+
+TODO: daylight cycle
+
+TODO: modify the lighting system so that player can easily recognize the distance (mist effect)
 
 # version 4
 
@@ -135,17 +142,18 @@ multi-threading, so I didn't migrate it to the next version.
 
 ## Physics
 
-TODO: move to latest version
-
 The physics engine is a simple custom one written from scratch.
 
-I didn't have an experience implementing a physice engine before. So it doesn't contain any broad-phase or narrow phase,
+I didn't have an experience implementing a physics engine before. So it doesn't contain any broad-phase or narrow-phase,
 and it only supports collision detection and ray-casting. The collider on the player supports a behaviour similar
 to [`KinematicBody.move_and_slide`](https://docs.godotengine.org/en/3.2/classes/class_kinematicbody2d.html#class-kinematicbody2d-method-move-and-slide)
 of the Godot engine.
 
 Erin Catto has [a great talk](https://www.youtube.com/watch?v=7_nKOET6zwI) about how to implement physics engines. But I
 only used some really basic techniques in this engine.
+
+There are also [articles](https://tavianator.com/2011/ray_box.html) about how to implement branchless AABB ray-casting.
+Developers from Respawn shared [how to write SIMD version of it](https://www.youtube.com/watch?v=6BIfqfC1i7U).
 
 ### Binary search for Time of Impact
 
@@ -173,9 +181,29 @@ realized that I didn't need it at all. I also used [spdlog](https://github.com/g
 greatly slowed down the compilation speed. Logging with [SDL log](https://wiki.libsdl.org/CategoryLog) is enough for
 most games.
 
+## Chunk system
+
 TODO: add description for the Chunk system and its multi-threaded generation
 
-TODO: perlin noise world generation
+## Perlin noise world generation
+
+I used [a Perlin noise library](https://github.com/Reputeless/PerlinNoise) for the world generation. But when I tested
+it on multiple platforms, the same seed generated different worlds. MinGW GCC and linux GCC produced the same result,
+while MSVC gave a completely different terrain. So I realized that there might be some problems with the standard
+library. At first I thought maybe `std::mersenne_twister_engine` would behave differently on different platforms, but
+that wasn't the case. The real bug is
+from [`BasicPerlinNoise::reseed()`](https://github.com/Reputeless/PerlinNoise/blob/master/PerlinNoise.hpp#L125).
+
+```c++
+std::shuffle(std::begin(p), std::begin(p) + 256, std::default_random_engine(seed));
+```
+
+This is the standard way to generate the `permutation` array
+from [the original Perlin noise implementation](https://mrl.nyu.edu/~perlin/noise/), but `std::shuffle` is implemented
+differently in GCC and MSVC! After reading their standard libraries source code, I found that they both use
+[the Knuth shuffle algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle). But there
+are [two ways](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm) (iterating from two
+directions) to shuffle an array, and they do not produce the same results.
 
 # version 1
 
