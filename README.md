@@ -52,11 +52,11 @@ TODO: level rework
 
 TODO: A-B switch and global switch
 
-TODO: bullet-time and why it doesn't work, only kept the zoom effect; coyote-time
-
 TODO: self-emission texture
 
 ## version 5.1
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-5.1.png" width=50% height=50%>
 
 I used a new set of textures in this version because the Kenney textures seemed too dark
 after [distance attenuation](#distance-attenuation).
@@ -68,9 +68,27 @@ But I didn't include the main menu in version 5.0, so no one could access it.
 
 TODO: level rework
 
+### Bullet time and why it didn't work
+
+The jumping section was still very hard. A friend suggested me to add an ability: bullet time.
+
+I added bullet time so that players could press right mouse button to slow down the time when airborne. But then I
+realized that giving them such abilities simply nullified all jumping challenges. There isn't any time limit for the
+game, so players can slowly walk through the level at ease. Eventually, I removed the bullet time.
+
+### Coyote time
+
+In games with coyote time, players can still jump shortly after they walk off a platform. This greatly improves the
+experience and makes the physics system more forgiving. I decided not to implement such system in version 5.0 because I
+wanted the jumping challenges to be really hard. Later I found out that adding coyote time didn't simplify the jumping
+challenges, and some players didn't like to look down when they are jumping. Without coyote time, the physics engine
+behaved really strange for these players.
+
 ## version 5.0
 
 The textures and sound effects are from [Kenney](https://www.kenney.nl/). Thanks, Kenney!
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-5.0.png" width=50% height=50%>
 
 ### Level design
 
