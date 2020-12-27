@@ -28,6 +28,8 @@ if you run it on Intel GPUs.**
 
 TODO: fix license problem
 
+TODO: remove decade sound
+
 # version 5 (the current version)
 
 The current version of the game (engine). This version
@@ -41,13 +43,25 @@ TODO: Tracy profiler
 
 TODO: RenderDoc
 
+TODO: chunk system: migrating from manually update to timestamp-based update
+
+## version 5.2
+
+TODO: level rework
+
+TODO: A-B switch and global switch
+
+TODO: bullet-time and why it doesn't work, only kept the zoom effect; coyote-time
+
+TODO: self-emission texture
+
 ## version 5.1
 
-TODO
+TODO: level rework; changed texture
 
 ## version 5.0
 
-TODO
+TODO: level design; modify the lighting system so that player can easily recognize the distance (mist effect)
 
 # version 4
 
@@ -121,6 +135,8 @@ multi-threading, so I didn't migrate it to the next version.
 
 ## Physics
 
+TODO: move to latest version
+
 The physics engine is a simple custom one written from scratch.
 
 I didn't have an experience implementing a physice engine before. So it doesn't contain any broad-phase or narrow phase,
@@ -156,6 +172,10 @@ which is a C++ [ECS (Entity Component System)](https://en.wikipedia.org/wiki/Ent
 realized that I didn't need it at all. I also used [spdlog](https://github.com/gabime/spdlog) for logging, and it
 greatly slowed down the compilation speed. Logging with [SDL log](https://wiki.libsdl.org/CategoryLog) is enough for
 most games.
+
+TODO: add description for the Chunk system and its multi-threaded generation
+
+TODO: perlin noise world generation
 
 # version 1
 
