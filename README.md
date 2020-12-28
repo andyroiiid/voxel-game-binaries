@@ -50,9 +50,7 @@ TODO: parse vox file(https://github.com/ephtracy/voxel-model/blob/master/MagicaV
 
 TODO: level rework
 
-TODO: A-B switch and global switch
-
-TODO: self-emission texture
+TODO: light-sphere
 
 ## version 5.1
 
@@ -82,7 +80,7 @@ In games with coyote time, players can still jump shortly after they walk off a 
 experience and makes the physics system more forgiving. I decided not to implement such system in version 5.0 because I
 wanted the jumping challenges to be really hard. Later I found out that adding coyote time didn't simplify the jumping
 challenges, and some players didn't like to look down when they are jumping. Without coyote time, the physics engine
-behaved really strange for these players.
+behaved strangely for these players.
 
 ## version 5.0
 

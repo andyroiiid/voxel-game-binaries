@@ -1,0 +1,18 @@
+{
+  "size": 16,
+  "filtered": false,
+  "baseDir": "assets/free_fall/",
+  "blocks": {
+    "Null": "null.png",
+    "Basic": "basic.png",
+    "Respawn": "respawn.png",
+    "Info": "info.png",
+    "Switch": "switch.png",
+    "Door": "door.png",
+    "ASwitch": "a_switch.png",
+    "BSwitch": "b_switch.png",
+    "ADoor": "a_door.png",
+    "BDoor": "b_door.png",
+    "Max": "max.png"
+  }
+}

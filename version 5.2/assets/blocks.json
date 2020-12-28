@@ -1,0 +1,16 @@
+{
+  "size": 128,
+  "filtered": true,
+  "baseDir": "assets/",
+  "blocks": {
+    "Null": "null.png",
+    "Sand": "sand.png",
+    "Dirt": "dirt.png",
+    "Stone": "stone.png",
+    "Brick": "brick.png",
+    "Grass": "grass.png",
+    "Wood": "wood.png",
+    "Plank": "plank.png",
+    "Max": "max.png"
+  }
+}
