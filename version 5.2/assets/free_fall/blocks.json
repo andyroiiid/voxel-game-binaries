@@ -14,6 +14,13 @@
     "ADoor": "a_door.png",
     "BDoor": "b_door.png",
     "ActiveRespawn": "active_respawn.png",
+    "Reserved0": "null.png",
+    "Reserved1": "null.png",
+    "Reserved2": "null.png",
+    "Reserved3": "null.png",
+    "Reserved4": "null.png",
+    "Reserved5": "null.png",
+    "StoneBricks": "stone_bricks.png",
     "Max": "max.png"
   }
 }
