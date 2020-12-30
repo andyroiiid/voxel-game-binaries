@@ -2,9 +2,38 @@
 
 Binaries for a voxel game (engine?).
 
+TODO: add TOC
+
+TODO: fix fmod & freetype license problems
+
+# Download and instructions for the latest version
+
 You can download the whole repository [here](https://github.com/andyroiiid/voxel-game-binaries/archive/master.zip).
 
-The zip file size is about 50MB.
+The zip file size is about 50MB. The latest version is 5.2.
+
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-5.2.png" width=50% height=50%>
+
+```
+return to main menu: esc
+
+FreeFall mode:
+
+horizontal movement: WASD
+jump: space
+interact: left click
+orange blocks are save points
+green blocks unlocks the red blocks
+blue/pink blocks can switch on/off blocks of corresponding color
+
+Playground mode:
+
+horizontal movement: WASD
+ascend: Q
+descend: E
+destroy block: left click
+create block: right click
+```
 
 **IMPORTANT!!!**
 
@@ -26,10 +55,6 @@ Intel 26.20.100.6861 graphics driver on Windows 10. Released May 2019.
 be [some driver bugs](https://blog.magnum.graphics/announcements/2020.06/#certain-gl-drivers-continue-to-be-a-hot-mess)
 if you run it on Intel GPUs.**
 
-TODO: add TOC
-
-TODO: add a proper license
-
 # version 5 (the current version)
 
 The current version of the game (engine). This version
@@ -48,6 +73,29 @@ TODO: parse vox file(https://github.com/ephtracy/voxel-model/blob/master/MagicaV
 
 ## version 5.2
 
+<img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-5.2.png" width=50% height=50%>
+
+```
+return to main menu: esc
+
+FreeFall mode:
+
+horizontal movement: WASD
+jump: space
+interact: left click
+orange blocks are save points
+green blocks unlocks the red blocks
+blue/pink blocks can switch on/off blocks of corresponding color
+
+Playground mode:
+
+horizontal movement: WASD
+ascend: Q
+descend: E
+destroy block: left click
+create block: right click
+```
+
 TODO: level rework
 
 TODO: light-sphere
@@ -55,6 +103,26 @@ TODO: light-sphere
 ## version 5.1
 
 <img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-5.1.png" width=50% height=50%>
+
+```
+FreeFall mode:
+
+horizontal movement: WASD
+jump: space
+interact: left click
+orange blocks are save points
+green blocks unlocks the red blocks
+
+Playground mode:
+
+horizontal movement: WASD
+ascend: Q
+descend: E
+destroy block: left click
+create block: right click
+
+return to main menu: esc
+```
 
 I used a new set of textures in this version because the Kenney textures seemed too dark
 after [distance attenuation](#distance-attenuation).
@@ -87,6 +155,16 @@ behaved strangely for these players.
 The textures and sound effects are from [Kenney](https://www.kenney.nl/). Thanks, Kenney!
 
 <img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-5.0.png" width=50% height=50%>
+
+```
+horizontal movement: WASD
+jump: space
+interact: left click
+dirt(brown) blocks are save points
+grass(green) blocks unlocks the brick(red) blocks
+
+quit: alt+F4
+```
 
 ### Level design
 
