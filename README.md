@@ -37,6 +37,9 @@ create block: right click
 
 **IMPORTANT!!!**
 
+**This version
+requires [AVX2 instruction set support](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2).**
+
 **This game uses [OpenGL 4.6 core profile](https://en.wikipedia.org/wiki/OpenGL#OpenGL_4.6)
 and [Direct State Access(DSA)](https://www.khronos.org/opengl/wiki/Direct_State_Access).**
 
@@ -57,7 +60,7 @@ if you run it on Intel GPUs.**
 
 # version 5 (the current version)
 
-The current version of the game (engine). This version
+This version
 requires [AVX2 instruction set support](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2).
 
 TODO: provide SSE build for the last version
