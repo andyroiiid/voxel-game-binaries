@@ -1,5 +1,5 @@
 {
-  "size": 16,
+  "size": 32,
   "filtered": false,
   "baseDir": "assets/free_fall/",
   "blocks": {
@@ -13,6 +13,7 @@
     "BSwitch": "b_switch.png",
     "ADoor": "a_door.png",
     "BDoor": "b_door.png",
+    "ActiveRespawn": "active_respawn.png",
     "Max": "max.png"
   }
 }
