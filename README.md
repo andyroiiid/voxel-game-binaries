@@ -6,6 +6,10 @@ TODO: add TOC
 
 TODO: fix fmod & freetype license problems
 
+# Playthrough video (YouTube)
+
+You can watch a sample playthrough of the game [here](https://youtu.be/lNVkgavvEAs) on YouTube.
+
 # Download and instructions for the latest version
 
 You can download the whole repository [here](https://github.com/andyroiiid/voxel-game-binaries/archive/master.zip).
