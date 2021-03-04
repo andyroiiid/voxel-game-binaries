@@ -2,10 +2,6 @@
 
 Binaries for a voxel game (engine?).
 
-TODO: add TOC
-
-TODO: fix fmod & freetype license problems
-
 # Playthrough video (YouTube)
 
 You can watch a sample playthrough of the game [here](https://youtu.be/lNVkgavvEAs) on YouTube.
@@ -104,14 +100,6 @@ destroy block: left click
 create block: right click
 ```
 
-### Level rework
-
-TODO: level rework
-
-### Light sphere
-
-TODO: light-sphere
-
 ## version 5.1
 
 <img src="https://raw.githubusercontent.com/andyroiiid/voxel-game-binaries/master/screenshots/version-5.1.png" width=50% height=50%>
@@ -141,10 +129,6 @@ after [distance attenuation](#distance-attenuation).
 
 This version also contained a Playground mode, which is a Minecraft-like mode. In fact, it had always been in the game.
 But I didn't include the main menu in version 5.0, so no one could access it.
-
-### Level rework
-
-TODO: level rework
 
 ### Bullet time and why it didn't work
 
@@ -177,10 +161,6 @@ grass(green) blocks unlocks the brick(red) blocks
 
 quit: alt+F4
 ```
-
-### Level design
-
-TODO: Free Fall level design
 
 ### The skybox
 
@@ -296,14 +276,6 @@ Erin Catto has [a great talk](https://www.youtube.com/watch?v=7_nKOET6zwI) about
 are also [articles](https://tavianator.com/2011/ray_box.html) about how to implement branchless AABB ray-casting.
 Developers from Respawn shared [how to write SIMD version of it](https://www.youtube.com/watch?v=6BIfqfC1i7U). But I
 only used some really basic techniques in this engine.
-
-### Binary search for Time of Impact
-
-TODO: illustration and when to terminate
-
-### A simple way to implement ray-casting for voxel worlds
-
-TODO: illustration and time profiling
 
 The player has an AABB collider instead of a capsule.
 
